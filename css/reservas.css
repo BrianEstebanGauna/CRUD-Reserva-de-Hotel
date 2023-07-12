@@ -1,0 +1,116 @@
+body{
+    background-color: #E2DDD0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reservas{
+    display: flex;
+    justify-content: center;
+}
+
+/* nuevo */
+
+.nuevo:link, .nuevo:visited {
+    background-color:  #04AA6D;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .nuevo:hover, .nuevo:active {
+    background-color:  #01774c;
+  }
+
+/* Lista */
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+/* editar */
+
+.editar:link, .editar:visited {
+    background-color:  #0584ce;
+    color: white;
+    padding: 14px 33px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .editar:hover, .editar:active {
+    background-color:   #046daa;
+  }
+
+/* eliminar */
+
+.btn-group .button {
+    background-color: #db0c05;
+    border: none;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-group .button:hover {
+    background-color: #a50904;
+  }
+
+/* footer */
+
+.fin {
+    background-color: #59481d;
+    color: white;
+}
+
+.logotipo {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 100;
+    margin: 0;
+}
+
+.fin p{
+    margin: 0;
+}
+
+.fin h2{
+    text-align: center;
+}
+
+.fin {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

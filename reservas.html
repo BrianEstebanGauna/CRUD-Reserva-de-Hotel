@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <title>RESERVAS</title>
+    <link rel="icon" type="image/x-icon" href="img/hotel.png">
+    <link rel="stylesheet" type="text/css" href="/css/reservas.css"/>
+</head>
+<body>
+    <!-- place navbar here -->
+    <!-- <header id="header">
+        
+    </header> -->
+    <main>
+        <div id="app" class="container">
+            <h1 class="reservas">Reservas</h1>
+            <br>
+            <a  class="btn btn-primary nuevo" href="reserva_nuevo.html">Nuevo</a>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="customers">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Pago</th>
+                                    <th scope="col">Dni</th>
+                                    <th scope="col">Checkin</th>
+                                    <th scope="col">Checkout</th>
+                                    <th scope="col">Habitacion</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class=""  v-for="reserva in reservas">
+                                    <td scope="row">{{reserva.id}}</td>
+                                    <td>{{reserva.nombre}}</td>
+                                    <td>{{reserva.precio}}</td>
+                                    <td>{{reserva.dni}}</td>
+                                    <td>{{reserva.checkin}}</td>
+                                    <td>{{reserva.checkout}}</td>
+                                    <td>{{reserva.habitacion}}</td>
+                                    <td>
+                                        <img width="60"  :src="reserva.imagen" :alt="reserva.nombre">
+                                    </td>
+                                    <td class="btn-group">
+                    			<a class="btn btn-primary editar" :href="'reserva_update.html?id='+ reserva.id" >Editar</a>
+                                      <button type="button" class="button btn btn-danger" v-on:click="eliminar(reserva.id)" >Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="fin">
+        <div>
+            <h2 class="logotipo">Hotel Paraiso Argentino</h2>
+        </div>
+        <div>
+            <p>brianestebangauna@gmail.com</p>
+        </div>
+    </footer>
+    <!-- place footer here -->
+    <!-- <footer>
+        
+    </footer> -->
+    <!-- <script 
+Link de Bootstrap
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script> -->
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/reservas.js"></script>
+</body>
+</html>
